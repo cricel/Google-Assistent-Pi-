@@ -60,6 +60,8 @@ In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2
  
         aplay --format=S16_LE --rate=16000 out.raw
  
+**if the above method can not get speaker or microphone to working, you could always try to right click on the top right 'voice' icon and select ``` Sound Preferences```, manual choose the audio input and output device**
+
 ## setup project
 ### get project folder
     git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
