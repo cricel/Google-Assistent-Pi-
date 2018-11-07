@@ -9,9 +9,9 @@
 
 
 # Setup
-## system update
+## System Update
     sudo rpi-update
-## audio setup
+## Audio Setup
 ```the 3.5mm audio jack on raspberry pi did not support audio in, it only support audio out, so we have to use USB device for audio in, and 3.5mm audio jack for audio out ```
 ### for 3.5mm audio jack speaker
 use below command to switch the audio output to audio jack instead of HDMI
@@ -23,7 +23,7 @@ use below command to switch the audio output to audio jack instead of HDMI
     sudo raspi-config
 -> ```Advanced Options``` -> ```Audio``` -> ```Force 3.5 ('headphone') jack```
 
-## if the audio quality is really bad, try below command to fix it
+### if the audio quality is really bad, try below command to fix it
 In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2```
 ### microphone setup
 1. Find your recording and playback devices:
@@ -62,7 +62,7 @@ In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2
  
 **if the above method can not get speaker or microphone to working, you could always try to right click on the top right 'voice' icon and select ``` Sound Preferences```, manual choose the audio input and output device**
 
-## setup project
+## Project Setup
 ### get project folder
     git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
 ### install dependence
@@ -81,10 +81,17 @@ sudo pip3 install RPi.GPIO
 
   echo "/home/pi/AIY-projects-python/src" > /usr/local/lib/python3.5/dist-packages/aiy.pth
 
-### test with demo
+## Credentials Setup
+
+refer to ```https://aiyprojects.withgoogle.com/voice-v1/```->```User’s Guide```->```SETTING UP YOUR DEVICE```
+follow it until step 12
+
+## test with demo
 inside the project folder:
 
     src/examples/voice/assistant_library_demo.py
+    
+**for the first time use, it will open a browser and ask you to give permission to it, click on ACCEPT and close the program and run it again**
 
 
 
