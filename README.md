@@ -92,14 +92,16 @@ sudo pip3 install google_auth_oauthlib
 refer to ```https://aiyprojects.withgoogle.com/voice-v1/```->```User’s Guide```->```SETTING UP YOUR DEVICE```
 follow it until step 12
 
-## test with demo
+# Test
+
+## Test with demo
 inside the project folder:
 
     src/examples/voice/assistant_library_demo.py
     
 **for the first time use, it will open a browser and ask you to give permission to it, click on ACCEPT**
 
-## link Google Assistant with Arduino
+## Link Google Assistant with Arduino
 refer to https://playground.arduino.cc/interfacing/python
 
 read data from Arduino:
