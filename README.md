@@ -70,6 +70,7 @@ In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2
 ### install dependence
 ```
 sudo pip3 install --upgrade pip setuptools wheel
+sudo pip3 install pySerial
 sudo pip3 install google-assistant-grpc==0.1.0
 sudo pip3 install google-assistant-library==0.1.0
 sudo pip3 install google-cloud-speech==0.30.0
@@ -96,7 +97,23 @@ inside the project folder:
 
     src/examples/voice/assistant_library_demo.py
     
-**for the first time use, it will open a browser and ask you to give permission to it, click on ACCEPT and close the program and run it again**
+**for the first time use, it will open a browser and ask you to give permission to it, click on ACCEPT**
 
+## link Google Assistant with Arduino
+refer to https://playground.arduino.cc/interfacing/python
 
+read data from Arduino:
+```
+import serial
+ser = serial.Serial('/dev/tty.usbserial', 9600)
+while True:
+    print ser.readline()
+```
 
+write data to Arduino
+```
+import serial # if you have not already done so
+ser = serial.Serial('/dev/tty.usbserial', 9600)
+ser.write(b'5')
+```
+**because the different encoding and decoding method in python3 and arduino, the ```0``` in python is equal to ```48``` in arduino, ```1``` is equal to ```49```. etc**
