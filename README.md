@@ -76,6 +76,7 @@ sudo pip3 install paho-mqtt
 sudo pip3 install picamera
 sudo pip3 install pillow
 sudo pip3 install RPi.GPIO
+sudo pip3 install google_auth_oauthlib
 ```
 ### link aiy dependence file
 
