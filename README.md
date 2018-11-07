@@ -26,6 +26,9 @@ use below command to switch the audio output to audio jack instead of HDMI
 ### if the audio quality is really bad, try below command to fix it
 In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2```
 ### microphone setup
+
+**right click on the top right 'voice' icon and select ``` Sound Preferences```, manual choose the audio input device, if it does not work, try the blow method to enable the microphone** 
+
 1. Find your recording and playback devices:
 - Locate your USB microphone in the list of capture hardware devices. Write down the card number and device number.
 
@@ -43,7 +46,7 @@ In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2
       }
     }
     ```
-3. Verify that recording and playback work:
+### Verify that recording and playback work:
 - Adjust the playback volume. (Press the up arrow key to set the playback volume level to 100.)
 
        alsamixer
@@ -59,11 +62,10 @@ In the end of ```/boot/config.txt``` add the following line: ```audio_pwm_mode=2
  - Check the recording by replaying it. If you don't hear anything, you may need to check the recording volume in alsamixer.
  
         aplay --format=S16_LE --rate=16000 out.raw
- 
-**if the above method can not get speaker or microphone to working, you could always try to right click on the top right 'voice' icon and select ``` Sound Preferences```, manual choose the audio input and output device**
 
 ## Project Setup
 ### get project folder
+    sudo apt install git
     git clone https://github.com/google/aiyprojects-raspbian.git AIY-projects-python
 ### install dependence
 ```
@@ -80,7 +82,9 @@ sudo pip3 install google_auth_oauthlib
 ```
 ### link aiy dependence file
 
-  echo "/home/pi/AIY-projects-python/src" > /usr/local/lib/python3.5/dist-packages/aiy.pth
+    sudo bash
+    echo "/home/<your_folder_location>/AIY-projects-python/src" > /usr/local/lib/python3.5/dist-packages/aiy.pth
+    exit
 
 ## Credentials Setup
 
