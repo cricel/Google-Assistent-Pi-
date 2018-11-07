@@ -104,6 +104,8 @@ inside the project folder:
 ## Link Google Assistant with Arduino
 refer to https://playground.arduino.cc/interfacing/python
 
+take a look at into ```/src/examples/voice/assistant_library_with_local_commands_demo.py```, you will need to modify this file to make it work with arduino
+
 read data from Arduino:
 ```
 import serial
